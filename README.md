@@ -76,6 +76,17 @@ src -- 源码目录
 
 ![公众号图片](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg)
 
+[docker pull nginx]
+docker run \
+-v /etc/localtime:/etc/localtime \
+-v /Users/mays/dockerDir/nginx/html:/usr/share/nginx/html \
+-p 80:80 \
+-e TZ=Asia/Shanghai\
+--privileged=true \
+--name nginx \
+--restart=always \
+-d nginx:latest
+
 ## 许可证
 
 [Apache License 2.0](https://github.com/macrozheng/mall-admin-web/blob/master/LICENSE)

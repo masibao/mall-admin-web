@@ -29,7 +29,7 @@ export const constantRouterMap = [
       path: 'home',
       name: 'home',
       component: () => import('@/views/home/index'),
-      meta: {title: '首页', icon: 'home'}
+      meta: {title: '主页', icon: 'home'}
     }]
   }
 ]
@@ -46,6 +46,12 @@ export const asyncRouterMap = [
       name: 'product',
       component: () => import('@/views/pms/product/index'),
       meta: {title: '商品列表', icon: 'product-list'}
+    },
+    {
+      path: 'productList',
+      name: 'productList',
+      component: () => import('@/views/pms/productList/index'),
+      meta: {title: '商品搜索列表', icon: 'product-list'}
     },
       {
         path: 'addProduct',
@@ -137,17 +143,17 @@ export const asyncRouterMap = [
     meta: {title: '订单', icon: 'order'},
     children: [
       {
-        path: 'order',
-        name: 'order',
-        component: () => import('@/views/oms/order/index'),
-        meta: {title: '订单列表', icon: 'product-list'}
-      },
-      {
         path: 'orderDetail',
         name: 'orderDetail',
         component: () => import('@/views/oms/order/orderDetail'),
         meta: {title: '订单详情'},
         hidden:true
+      },
+      {
+        path: 'order',
+        name: 'order',
+        component: () => import('@/views/oms/order/index'),
+        meta: {title: '订单列表', icon: 'product-list'}
       },
       {
         path: 'deliverOrderList',
